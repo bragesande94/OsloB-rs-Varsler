@@ -1,0 +1,28 @@
+{
+    "name": "OsloBørsVarsler",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Spill varsler for nyheter på OsloBørs",
+    "author": "Brage Sande @bragesan@gmail.com",
+    "content_scripts": [
+      {
+        "matches": ["https://*.oslobors.no/*", "*://*.oslobors.no/*"],
+        "js": ["scripts/jquery.js","scripts/content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "OsloBørsVarsler"
+    },
+    "background": {
+      "service_worker": "background-worker.js"
+    },
+    "permissions": ["tabs", "scripting", "activeTab", "storage", "unlimitedStorage" ],
+    "host_permissions": ["https://*.oslobors.no/*", "*://*.oslobors.no/*"],
+    "externally_connectable": {
+      "matches": ["*://*.oslobors.no/*"]
+    },
+    "icons": {
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png" }
+  }

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>OsloborsSound</title>
+</head>
+<body>
+    <img id="logo" src="images/logo.png" alt="TwitchComplete">
+    <input id="file_upload" type="file" accept=".mp3">
+    <input id="submit" type="button" value="Velg bilde" class="hover">
+    <span id="alert" style="display: none">Please choose a file first</span>
+    <div id="refresh_div">
+        <input type="number" id="refresh_interval" min="6" max="10000" maxlength="4" step="1">
+        <button id="set_refresh">Velg</button>
+        <span>seconds</span>
+    </div>
+
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/popup.js" charset="utf-8"></script>
+</body>
+</html>
